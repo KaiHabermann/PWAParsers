@@ -8,7 +8,7 @@ exclude = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/decayamplitude"]
+packages = ["src/pwaparsers"]
 
 [project]
 name = "PWAParsers"
