@@ -1,6 +1,6 @@
 from pydantic import BaseModel, field_validator
 from typing import Any
-from utils import flat_sorted_tuple, to_tuple
+from pwaparsers.utils import flat_sorted_tuple, to_tuple
 from decayangle.decay_topology import TopologyCollection
 
 def sanitize(name: str) -> str:
