@@ -159,6 +159,17 @@ class IntermdeiateState(BaseModel):
         {isobars}
     }}
 """
+    @property
+    def filled_nodes(self):
+        filled_nodes = set()
+        for tpl, isobar in self.as_dict.items():
+            if len(isobar.resonances) > 0:
+                filled_nodes.add(flat_sorted_tuple(tpl))
+        return filled_nodes
+
+    @property
+    def as_dict(self):
+        return {isobar.tuple: isobar for isobar in self.isobars.values()}
 
 class DecaySetup(BaseModel):
     decay: int
